@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hedvig Letters Sans', sans-serif;
+}
+*::before, *::after {
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+span, a, label {
+    display: inline-block;
+}
+.bg {
+    background-color: aquamarine;
+    padding: 50px;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+.left {
+    width: 46%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 255, 0.626)), url("street.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+.lead {
+    margin: 10px 0 15px;
+}
+.leftbtn {
+    text-decoration: none;
+    background-color: teal;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+}
+.right {
+    background-color: white;
+    width: 54%;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.years {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    overflow: auto;
+}
+*::-webkit-scrollbar {
+    height: 6px;
+    width: 15px;
+}
+*::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+*::-webkit-scrollbar-thumb {
+    background-color: gray;
+}
+.year {
+    width: 13.5%;
+    flex-shrink: 0;
+}
+.row, .rowleft, .rowright {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.row {
+    margin-bottom: 20px;
+}
+.row:last-of-type {
+    margin-bottom: 0;
+}
+.rowpic {
+    width: 55px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+.rowdate {
+    line-height: 1;
+    font-size: 15px;
+}
+.rowday {
+    font-size: 40px;
+}
+.rowmonth {
+    font-weight: bold;
+}
+@media(max-width:935px){
+    .bg {
+        padding: 20px;
+    }
+}
+@media(max-width:870px){
+    .left, .right {
+        width: 100%;
+    }
+    .left {
+        padding: 100px 20px;
+    }
+}
+@media(max-width:550px){
+    .row {
+        flex-direction: column;
+    }
+    .year {
+        width: 15%;
+    }
+}
+@media(max-width:450px){
+    .year {
+        width: 20%;
+    }
+}
+@media(max-width:400px){
+    .rowleft {
+        flex-direction: column;
+    }
+    .years {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .year {
+        width: 25%;
+        text-align: center;
+    }
+    .right, .bg {
+        padding: 10px;
+    }
+    .left {
+        padding: 50px 15px;
+        text-align: center;
+    }
+}
